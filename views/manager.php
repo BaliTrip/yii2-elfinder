@@ -19,6 +19,17 @@ $options['soundPath'] = Assets::getSoundPathUrl();
 
 
 $this->registerJs("
+  var FileBrowserDialogue = {
+    init: function() {
+      // Here goes your code for setting your custom things onLoad.
+    },
+    mySubmit: function (file, elf) {
+      // pass selected file data to TinyMCE
+      parent.tinymce.activeEditor.windowManager.getParams().oninsert(file, elf);
+      // close popup window
+      parent.tinymce.activeEditor.windowManager.close();
+    }
+  }
 function ElFinderGetCommands(disabled){
     var Commands = elFinder.prototype._options.commands;
     if (jQuery.inArray('*', Commands) === 0) {
@@ -49,7 +60,7 @@ function ElFinderGetCommands(disabled){
         el.resize(width, height);
     }
 
-    jQuery('#elfinder').elfinder(".Json::encode($options).").elfinder('instance');
+    var elf = jQuery('#elfinder').elfinder(".Json::encode($options).").elfinder('instance');
 
     jQuery(window).resize(elFinderFullScreen);
 

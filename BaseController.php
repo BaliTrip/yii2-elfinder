@@ -81,6 +81,10 @@ class BaseController extends Controller{
 				$options['onlyMimes'] = [$_GET['filter']];
 		}
 
+		if(isset($_GET['tinymce'])){
+			$options['getFileCallback'] = new JsExpression('function(file){ FileBrowserDialogue.mySubmit(file, elf); }');
+		}
+
 		if(isset($_GET['lang']))
 			$options['lang'] = $_GET['lang'];
 
