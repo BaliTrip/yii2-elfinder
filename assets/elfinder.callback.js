@@ -1,8 +1,8 @@
-if (typeof mihaildev == "undefined" || !mihaildev) {
-    var mihaildev = {};
+if (typeof balitrip == "undefined" || !balitrip) {
+    var balitrip = {};
 }
 
-mihaildev.elFinder = {
+balitrip.elFinder = {
     openManager: function(options){
         var params = "menubar=no,toolbar=no,location=no,directories=no,status=no,fullscreen=no";
         if(options.width == 'auto'){

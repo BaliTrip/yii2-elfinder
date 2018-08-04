@@ -4,7 +4,7 @@
  * Time: 20:10
  */
 
-namespace mihaildev\elfinder;
+namespace balitrip\elfinder;
 
 
 abstract class PluginInterface

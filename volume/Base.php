@@ -4,7 +4,7 @@
  * Time: 10:39
  */
 
-namespace mihaildev\elfinder\volume;
+namespace balitrip\elfinder\volume;
 
 use Yii;
 use yii\base\BaseObject;

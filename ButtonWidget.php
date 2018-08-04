@@ -11,7 +11,7 @@
  * file that was distributed with this source code.
 */
 
-namespace mihaildev\elfinder;
+namespace balitrip\elfinder;
 use yii\base\Widget;
 use yii\helpers\Html;
 use yii\helpers\Json;
@@ -19,7 +19,7 @@ use yii\helpers\Json;
 /**
  * Class ButtonWidget
  *
- * @package mihaildev\elfinder
+ * @package balitrip\elfinder
  */
 class ButtonWidget extends Widget{
 	public $language;
@@ -84,7 +84,7 @@ class ButtonWidget extends Widget{
 
 		echo Html::tag($this->tag, $this->name, $this->options);
 
-		$this->getView()->registerJs("mihaildev.elFinder.register(" . Json::encode($this->_managerOptions['id']) . ", " . Json::encode($this->callback) . ");"); // register callback Function
-		$this->getView()->registerJs("\$(document).on('click', '#" . $this->options['id'] . "', function(){mihaildev.elFinder.openManager(" . Json::encode($this->_managerOptions) . ");});");//on click button open manager
+		$this->getView()->registerJs("balitrip.elFinder.register(" . Json::encode($this->_managerOptions['id']) . ", " . Json::encode($this->callback) . ");"); // register callback Function
+		$this->getView()->registerJs("\$(document).on('click', '#" . $this->options['id'] . "', function(){balitrip.elFinder.openManager(" . Json::encode($this->_managerOptions) . ");});");//on click button open manager
 	}
 }

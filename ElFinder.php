@@ -4,7 +4,7 @@
  * Time: 23:44
  */
 
-namespace mihaildev\elfinder;
+namespace balitrip\elfinder;
 
 use Yii;
 use yii\base\Widget as BaseWidjet;
@@ -14,7 +14,7 @@ use yii\helpers\Json;
 
 /**
  * Class Widget
- * @package mihaildev\elfinder
+ * @package balitrip\elfinder
  */
 
 class ElFinder extends BaseWidjet{
@@ -146,7 +146,7 @@ class ElFinder extends BaseWidjet{
 
 		if(!empty($this->callbackFunction)){
 			AssetsCallBack::register($this->getView());
-			$this->getView()->registerJs("mihaildev.elFinder.register(".Json::encode($this->id).",".Json::encode($this->callbackFunction).");");
+			$this->getView()->registerJs("balitrip.elFinder.register(".Json::encode($this->id).",".Json::encode($this->callbackFunction).");");
 		}
 	}
 }

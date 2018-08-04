@@ -1,6 +1,6 @@
 <?php
 
-namespace mihaildev\elfinder;
+namespace balitrip\elfinder;
 
 use yii\web\AssetBundle;
 use yii\web\JqueryAsset;
